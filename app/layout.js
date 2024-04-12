@@ -1,6 +1,7 @@
 import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import { Analytics } from '@vercel/analytics/react';
 
 const sans = Source_Sans_3({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className={sans.className}>
         <Nav/>
         {children}
+        <Analytics/>
         </body>
     </html>
   );
